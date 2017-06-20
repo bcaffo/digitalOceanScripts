@@ -52,9 +52,6 @@ ufw allow ssh
 ufw -f enable
 
 # now going to the ip should show an nginx screen
-
-
-mkdir /var/plumber/hello
 cp /usr/local/lib/R/site-library/plumber/examples/10-welcome/* /var/plumber/hello/
 wget https://raw.githubusercontent.com/bcaffo/alexaai/master/lectures/03_using_plumber/servicefile
 mv servicefile /etc/systemd/system/plumber-hello.service
