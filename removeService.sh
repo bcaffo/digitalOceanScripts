@@ -3,8 +3,9 @@
 # useage 
 # wget https://raw.githubusercontent.com/bcaffo/digitalOceanScripts/master/removeService.sh
 # chmod u+x removeService.sh
-# ./removeService SERVACENAME
+# ./removeService SERVACENAME SERVICEPATH
 # Brian Caffo June 2017
+# TODO error checking and checking any issues with the path
 
 serviceName="plumber-"$1
 path=$2
