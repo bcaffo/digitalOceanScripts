@@ -3,6 +3,11 @@
 # make sure to add your ssh key
 # boot up the instance, ssh in as root
 # this script sets up plumber and nginx
+# Based on Jeff Allen's do_provision function from plumber
+# Brian Caffo 6/21/2017
+# you can run this as 
+# wget https://raw.githubusercontent.com/bcaffo/digitalOceanScripts/master/setUpPlumber.sh
+# bash setUpPlumber.sh
 
 # create swap if you have a low memory instance
 fallocate -l 4G /swapfile 
