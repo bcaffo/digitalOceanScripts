@@ -15,3 +15,4 @@ rm /etc/nginx/sites-available/plumber-apis/${path}.conf
 systemctl reload nginx
 rm -rf /var/plumber/$path
 
+
