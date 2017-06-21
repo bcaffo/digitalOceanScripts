@@ -7,4 +7,5 @@
 # Brian Caffo June 2017
 
 serviceName = "plumber-"$1
+echo $serviceName
 
