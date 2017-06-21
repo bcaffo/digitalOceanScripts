@@ -1,8 +1,12 @@
 
+#! /bin/bash
 ## get's the hello example up and running
 ## requires running the setUpPlumber script first
 ## based on Jeff Allen's script
 ## Brian Caffo 6/21/2017
+## run with: 
+## wget https://raw.githubusercontent.com/bcaffo/digitalOceanScripts/master/hello.sh
+## bash hello.sh
 
 mkdir -p /var/plumber/hello
 cp /usr/local/lib/R/site-library/plumber/examples/10-welcome/* /var/plumber/hello/
