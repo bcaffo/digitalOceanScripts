@@ -11,7 +11,7 @@ wget https://raw.githubusercontent.com/bcaffo/digitalOceanScripts/master/setUpPl
 bash setUpPlumber.sh
 ```
 
-Co to your ip to make sure that nginx is set up correctly
+Go to your ip to make sure that nginx is set up correctly
 
 ## To set up the hello example 
 
@@ -19,6 +19,8 @@ Co to your ip to make sure that nginx is set up correctly
 wget https://raw.githubusercontent.com/bcaffo/digitalOceanScripts/master/hello.sh
 bash hello.sh
 ```
+
+If you go to `[IP ADDRESS]/hello` it should say "Plumber is alive!"
 
 ## To remove an API
 ```
