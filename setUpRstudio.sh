@@ -1,11 +1,6 @@
 # This is just a script version of http://deanattali.com/2015/05/09/setup-rstudio-shiny-server-digital-ocean/
 # You should step through this script, don't run it as a script like the other ones.
 
-# this is not technically necessary. However, it's generally considered good debian practice to create
-# a new user rather than always logging in as root.
-adduser NEWUSERNAME
-gpasswd -a NEWUSERNAME sudo
-su - NEWUSERNAME
 
 # also set up your ssh keys for this new user
 # cat MYPUBLICKEY >> ~/.ssh/authorized_keys
