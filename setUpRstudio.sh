@@ -31,7 +31,7 @@ sudo su - -c "R -e \"devtools::install_github('daattali/shinyjs')\""
 
 sudo apt-get -y install libapparmor1 gdebi-core
 wget https://download2.rstudio.org/rstudio-server-0.99.896-amd64.deb
-sudo gdebi rstudio-server-0.99.896-amd64.deb
+sudo gdebi --non-interactive "rstudio-server-0.99.896-amd64.deb"
 
 
 # I got this from here: https://support.rstudio.com/hc/en-us/articles/200552316-Configuring-the-Server
