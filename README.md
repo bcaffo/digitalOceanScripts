@@ -31,11 +31,12 @@ chmod u+x removeService.sh
 For example `./removeService hello` will remove the `hello` example
 
 ## To set up an rstudio server 
-Probably you want to set up a new user and then 
 ```
+## Optional, add a new user so that you're not always logging in as root.
 adduser NEWUSERNAME
 gpasswd -a NEWUSERNAME sudo
 su - NEWUSERNAME
+## install rstudio server and start it
 wget https://raw.githubusercontent.com/bcaffo/digitalOceanScripts/master/setUpRstudio.sh
 bash setUpRstudio.sh
 ```
