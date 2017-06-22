@@ -8,4 +8,3 @@
 
 serviceName = "plumber-"$1
 echo $serviceName
-
