@@ -27,8 +27,14 @@ bash hello.sh
 ```
 
 ## To set up an rstudio server 
-This isn't really set up as a script now. Just step through the lines of
-`setUpRstudio.sh`
+Probably you want to set up a new user and then 
+```
+adduser NEWUSERNAME
+gpasswd -a NEWUSERNAME sudo
+su - NEWUSERNAME
+wget https://raw.githubusercontent.com/bcaffo/digitalOceanScripts/master/setUpRstudio.sh
+bash setUpRstudio.sh
+```
 
 
 
