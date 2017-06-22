@@ -22,6 +22,14 @@ bash hello.sh
 
 If you go to `[IP ADDRESS]/hello` it should say "Plumber is alive!"
 
+## Td deploy and API
+I haven't tested this one yet
+```
+wget https://raw.githubusercontent.com/bcaffo/digitalOceanScripts/master/deployApi.sh
+chmod u+x deployApi.sh
+./deployApi.sh PATH LOCALPATH
+```
+
 ## To remove an API
 ```
 wget https://raw.githubusercontent.com/bcaffo/digitalOceanScripts/master/removeService.sh
