@@ -24,6 +24,14 @@ wget https://raw.githubusercontent.com/bcaffo/digitalOceanScripts/master/hello.s
 bash hello.sh
 ```
 
+## To remove an API
+```
+wget https://raw.githubusercontent.com/bcaffo/digitalOceanScripts/master/removeService.sh
+chmod u+x removeService.sh
+./removeService PATH
+```
+For example `./removeService hello` will remove the `hello` example
+
 ## To set up an rstudio server 
 Probably you want to set up a new user and then 
 ```
