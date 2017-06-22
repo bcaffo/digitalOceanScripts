@@ -36,6 +36,8 @@ sudo gdebi rstudio-server-0.99.896-amd64.deb
 
 # I got this from here: https://support.rstudio.com/hc/en-us/articles/200552316-Configuring-the-Server
 # this allows the port to be 80 so that you don't have to type 8787 
-echo "www-port=80" >> /etc/rstudio/rserver.conf
+sudo /bin/sh -c 'echo "www-port=80" >> /etc/rstudio/rserver.conf'
+
 sudo rstudio-server restart
+
 
