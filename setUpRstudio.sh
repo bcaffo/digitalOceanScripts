@@ -13,7 +13,7 @@ gpg -a --export E084DAB9 | sudo apt-key add -
 
 ## note added r-dev
 sudo apt-get update
-sudo apt-get -y install r-base r-dev
+sudo apt-get -y install r-base r-base-dev
 
 ## add swap space to install stuff
 sudo /bin/dd if=/dev/zero of=/var/swap.1 bs=1M count=1024
