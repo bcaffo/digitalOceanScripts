@@ -22,7 +22,7 @@ bash hello.sh
 
 If you go to `[IP ADDRESS]/hello` it should say "Plumber is alive!"
 
-## Td deploy and API
+## To deploy and API
 I haven't tested this one yet
 ```
 wget https://raw.githubusercontent.com/bcaffo/digitalOceanScripts/master/deployApi.sh
