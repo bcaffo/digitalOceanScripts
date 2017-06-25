@@ -1,8 +1,5 @@
 # This is just a script version of http://deanattali.com/2015/05/09/setup-rstudio-shiny-server-digital-ocean/
 
-# also set up your ssh keys for this new user
-# cat MYPUBLICKEY >> ~/.ssh/authorized_keys
-
 # get R
 sudo sh -c 'echo "deb http://cran.rstudio.com/bin/linux/ubuntu trusty/" >> /etc/apt/sources.list'
 gpg --keyserver keyserver.ubuntu.com --recv-key E084DAB9
@@ -23,11 +20,15 @@ sudo apt-get -y install libcurl4-gnutls-dev
 sudo apt-get -y install libxml2-dev
 sudo apt-get -y install libssl-dev
 
+## These seem optional (shiny and devtools)
 sudo su - -c "R -e \"install.packages('devtools', repos='http://cran.rstudio.com/')\""
 sudo su - -c "R -e \"devtools::install_github('daattali/shinyjs')\""
 
 
+# more dependencies
 sudo apt-get -y install libapparmor1 gdebi-core
+
+# actually install rstudio server
 wget https://download2.rstudio.org/rstudio-server-0.99.896-amd64.deb
 sudo gdebi --non-interactive "rstudio-server-0.99.896-amd64.deb"
 
