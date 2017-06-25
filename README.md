@@ -48,6 +48,10 @@ su - NEWUSERNAME
 wget https://raw.githubusercontent.com/bcaffo/digitalOceanScripts/master/setUpRstudio.sh
 bash setUpRstudio.sh
 ```
-
+Also, put your public key in your authorized keys file in `~/.ssh/authorized_keys`. For example,
+if you scp it to your server, 
+```
+cat MYPUBLICKEY >> ~/.ssh/authorized_keys
+```
 
 
