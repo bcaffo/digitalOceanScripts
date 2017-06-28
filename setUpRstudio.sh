@@ -21,8 +21,8 @@ sudo apt-get -y install libxml2-dev
 sudo apt-get -y install libssl-dev
 
 ## These seem optional (shiny and devtools)
-sudo su - -c "R -e \"install.packages('devtools', repos='http://cran.rstudio.com/')\""
-sudo su - -c "R -e \"devtools::install_github('daattali/shinyjs')\""
+# sudo su - -c "R -e \"install.packages('devtools', repos='http://cran.rstudio.com/')\""
+# sudo su - -c "R -e \"devtools::install_github('daattali/shinyjs')\""
 
 
 # more dependencies
