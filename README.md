@@ -54,4 +54,3 @@ if you scp it to your server,
 cat MYPUBLICKEY >> ~/.ssh/authorized_keys
 ```
 
-
