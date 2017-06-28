@@ -5,7 +5,6 @@ sudo sh -c 'echo "deb http://cran.rstudio.com/bin/linux/ubuntu trusty/" >> /etc/
 gpg --keyserver keyserver.ubuntu.com --recv-key E084DAB9
 gpg -a --export E084DAB9 | sudo apt-key add -
 
-
 ## note added r-dev
 sudo apt-get update
 sudo apt-get -y install r-base r-base-dev
@@ -24,14 +23,12 @@ sudo apt-get -y install libssl-dev
 # sudo su - -c "R -e \"install.packages('devtools', repos='http://cran.rstudio.com/')\""
 # sudo su - -c "R -e \"devtools::install_github('daattali/shinyjs')\""
 
-
 # more dependencies
 sudo apt-get -y install libapparmor1 gdebi-core
 
 # actually install rstudio server
 wget https://download2.rstudio.org/rstudio-server-0.99.896-amd64.deb
 sudo gdebi --non-interactive "rstudio-server-0.99.896-amd64.deb"
-
 
 # I got this from here: https://support.rstudio.com/hc/en-us/articles/200552316-Configuring-the-Server
 # this allows the port to be 80 so that you don't have to type 8787 
