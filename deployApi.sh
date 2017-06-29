@@ -18,6 +18,6 @@ systemctl enable $serviceName
 
 conf=/usr/local/lib/R/site-library/plumber/server/plumber-api.conf
 
-cp conf /etc/nginx/sites-available/plumber-apis/${path}.conf
+cp $conf /etc/nginx/sites-available/plumber-apis/${path}.conf
 systemctl reload nginx
 
