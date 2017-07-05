@@ -7,7 +7,7 @@ mkdir -p /var/plumber/${path}
 cp ${localPath}/* /var/plumber/${path}/.
 serviceName="plumber-"$path
 service=/usr/local/lib/R/site-library/plumber/server/plumber.service
-cp service /etc/systemd/system/${serviceName}.service
+cp $service /etc/systemd/system/${serviceName}.service
 systemctl daemon-reload
 systemctl start $serviceName && sleep 1
 systemctl restart $serviceName && sleep 1
