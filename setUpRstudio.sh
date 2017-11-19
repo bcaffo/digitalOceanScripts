@@ -39,5 +39,6 @@ sudo rstudio-server restart
 
 # install keras
 sudo su - -c "R -e \"devtools::install_github('rstudio/keras')\""
+sudo apt-get -y install python-pip python-virtualenv
 sudo su - -c "R -e \"library(keras); install_keras()\""
 
