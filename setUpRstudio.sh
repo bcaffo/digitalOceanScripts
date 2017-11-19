@@ -46,3 +46,14 @@ sudo su - -c "R -e \"library(keras); install_keras()\""
 
 # Install R Markdown
 sudo su - -c "R -e \"install.packages('rmarkdown', repos='http://cran.rstudio.com/')\""
+
+# Upgrade pip
+sudo apt-get install python-pip python-dev python-virtualenv
+sudo pip install --upgrade pip
+sudo pip install --upgrade keras
+sudo pip install --upgrade tensorflow
+sudo pip install --upgrade theano
+
+
+
+
