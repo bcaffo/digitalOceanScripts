@@ -20,13 +20,11 @@ sudo sh -c 'echo "/var/swap.1 swap swap defaults 0 0 " >> /etc/fstab'
 sudo apt-get -y install libcurl4-gnutls-dev
 sudo apt-get -y install libxml2-dev
 sudo apt-get -y install libssl-dev
+sudo apt-get -y install libapparmor1 gdebi-core
 
 ## Install shiny and devtools
 sudo su - -c "R -e \"install.packages('devtools', repos='http://cran.rstudio.com/')\""
 sudo su - -c "R -e \"install.packages('shiny', repos='http://cran.rstudio.com/')\""
-
-# more dependencies
-sudo apt-get -y install libapparmor1 gdebi-core
 
 # actually install rstudio server
 wget $RSTUDIO
