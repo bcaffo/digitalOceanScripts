@@ -44,3 +44,5 @@ sudo su - -c "R -e \"devtools::install_github('rstudio/keras')\""
 sudo apt-get -y install python-pip python-virtualenv
 sudo su - -c "R -e \"library(keras); install_keras()\""
 
+# Install R Markdown
+sudo su - -c "R -e \"install.packages('rmarkdown', repos='http://cran.rstudio.com/')\""
