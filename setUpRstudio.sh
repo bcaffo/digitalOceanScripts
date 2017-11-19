@@ -29,7 +29,9 @@ sudo su - -c "R -e \"install.packages('shiny', repos='http://cran.rstudio.com/')
 # actually install rstudio server
 wget $RSTUDIO
 wget $SHINY
-sudo gdebi --non-interactive *.deb
+sudo gdebi --non-interactive rstudio*.deb
+sudo gdebi --non-interactive shiny*.deb
+
 
 # I got this from here: https://support.rstudio.com/hc/en-us/articles/200552316-Configuring-the-Server
 # this allows the port to be 80 so that you don't have to type 8787 
