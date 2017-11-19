@@ -1,5 +1,6 @@
 # This is just a script version of http://deanattali.com/2015/05/09/setup-rstudio-shiny-server-digital-ocean/
 export RSTUDIO='https://s3.amazonaws.com/rstudio-dailybuilds/rstudio-server-1.1.383-amd64.deb'
+export SHINY='https://download3.rstudio.org/ubuntu-12.04/x86_64/shiny-server-1.5.5.872-amd64.deb'
 
 # get R
 sudo sh -c 'echo "deb http://cran.rstudio.com/bin/linux/ubuntu trusty/" >> /etc/apt/sources.list'
@@ -29,6 +30,7 @@ sudo apt-get -y install libapparmor1 gdebi-core
 
 # actually install rstudio server
 wget $RSTUDIO
+wget $SHINY
 sudo gdebi --non-interactive *.deb
 
 # I got this from here: https://support.rstudio.com/hc/en-us/articles/200552316-Configuring-the-Server
