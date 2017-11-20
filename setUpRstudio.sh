@@ -7,6 +7,9 @@ sudo sh -c 'echo "deb http://cran.rstudio.com/bin/linux/ubuntu trusty/" >> /etc/
 gpg --keyserver keyserver.ubuntu.com --recv-key E084DAB9
 gpg -a --export E084DAB9 | sudo apt-key add -
 
+## I like my prompt to be really small
+echo "PS1='$ '" >> .bashrc
+
 ## note added r-dev
 sudo apt-get update
 sudo apt-get -y install r-base r-base-dev
@@ -17,14 +20,20 @@ sudo /sbin/mkswap /var/swap.1
 sudo /sbin/swapon /var/swap.1
 sudo sh -c 'echo "/var/swap.1 swap swap defaults 0 0 " >> /etc/fstab'
 
+## Ubuntu installs
 sudo apt-get -y install libcurl4-gnutls-dev
 sudo apt-get -y install libxml2-dev
 sudo apt-get -y install libssl-dev
 sudo apt-get -y install libapparmor1 gdebi-core
+#install emacs
+sudo apt-get -y install emacs
+sudo apt-get -y install python-pip python-virtualenv
 
-## Install shiny and devtools
+
+## Install shiny, devtools, rmarkdown
 sudo su - -c "R -e \"install.packages('devtools', repos='http://cran.rstudio.com/')\""
 sudo su - -c "R -e \"install.packages('shiny', repos='http://cran.rstudio.com/')\""
+sudo su - -c "R -e \"install.packages('rmarkdown', repos='http://cran.rstudio.com/')\""
 
 # actually install rstudio server
 wget $RSTUDIO
@@ -37,22 +46,19 @@ sudo gdebi --non-interactive shiny*.deb
 # this allows the port to be 80 so that you don't have to type 8787 
 sudo /bin/sh -c 'echo "www-port=80" >> /etc/rstudio/rserver.conf'
 
-sudo rstudio-server restart
+sudo rstudio-server start
 
 # install keras
 sudo su - -c "R -e \"devtools::install_github('rstudio/keras')\""
-sudo apt-get -y install python-pip python-virtualenv
-sudo su - -c "R -e \"library(keras); install_keras()\""
-
-# Install R Markdown
-sudo su - -c "R -e \"install.packages('rmarkdown', repos='http://cran.rstudio.com/')\""
 
 # Upgrade pip
-sudo apt-get install python-pip python-dev python-virtualenv
-sudo pip install --upgrade pip
+sudo -H pip install --upgrade pip
 sudo pip install --upgrade keras
-sudo pip install --upgrade tensorflow
-sudo pip install --upgrade theano
+sudo -H pip install --upgrade tensorflow
+sudo -H pip install --upgrade theano
+
+#
+sudo su - -c "R -e \"library(keras); install_keras()\""
 
 
 
