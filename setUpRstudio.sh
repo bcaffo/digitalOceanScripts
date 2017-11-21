@@ -30,10 +30,11 @@ sudo apt-get -y install emacs
 sudo apt-get -y install python-pip python-virtualenv
 
 
-## Install shiny, devtools, rmarkdown
+## Install shiny, devtools, rmarkdown, tidyverse
 sudo su - -c "R -e \"install.packages('devtools', repos='http://cran.rstudio.com/')\""
 sudo su - -c "R -e \"install.packages('shiny', repos='http://cran.rstudio.com/')\""
 sudo su - -c "R -e \"install.packages('rmarkdown', repos='http://cran.rstudio.com/')\""
+sudo su - -c "R -e \"install.packages('tidyverse', repos='http://cran.rstudio.com/')\""
 
 # actually install rstudio server
 wget $RSTUDIO
