@@ -54,11 +54,12 @@ sudo su - -c "R -e \"devtools::install_github('rstudio/keras')\""
 
 # Upgrade pip
 sudo -H pip install --upgrade pip
+# Upgrade python AI libraries
 sudo pip install --upgrade keras
 sudo -H pip install --upgrade tensorflow
 sudo -H pip install --upgrade theano
 
-#
+# Install keras
 sudo su - -c "R -e \"library(keras); install_keras()\""
 
 
