@@ -28,7 +28,8 @@ sudo apt-get -y install libapparmor1 gdebi-core
 #install emacs
 sudo apt-get -y install emacs
 sudo apt-get -y install python-pip python-virtualenv
-
+# Install latex 
+sudo apt-get -y install texlive-full  
 
 ## Install shiny, devtools, rmarkdown, tidyverse
 sudo su - -c "R -e \"install.packages('devtools', repos='http://cran.rstudio.com/')\""
@@ -61,7 +62,6 @@ sudo -H pip install --upgrade theano
 
 # Install keras
 sudo su - -c "R -e \"library(keras); install_keras()\""
-
 
 
 
