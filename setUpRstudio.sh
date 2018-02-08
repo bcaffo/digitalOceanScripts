@@ -59,6 +59,9 @@ sudo -H pip install --upgrade pip
 sudo pip install --upgrade keras
 sudo -H pip install --upgrade tensorflow
 sudo -H pip install --upgrade theano
+sudo -H pip install --upgrade Pillow
+#sudo -H pip install --upgrade pillow
+
 
 # Install keras
 sudo su - -c "R -e \"library(keras); install_keras()\""
