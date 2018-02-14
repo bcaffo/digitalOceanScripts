@@ -1,5 +1,8 @@
 Documtation for the supoorted builds here [https://github.com/rocker-org/rocker/wiki/Using-the-RStudio-image](https://github.com/rocker-org/rocker/wiki/Using-the-RStudio-image)
 
+
+## Installing keras
+
 Create a DO instance with docker installed. (It's one of their packages that can be auto installed.) Download a rocker image:
 
 ```
@@ -38,5 +41,14 @@ install_keras()
 That works for me.
 
 
+## Installing rstudio
+
+Useful page [http://www.exegetic.biz/blog/2017/07/rstudio-docker-digitalocean/](http://www.exegetic.biz/blog/2017/07/rstudio-docker-digitalocean/)
+
+```
+docker pull rocker/rstudio
+docker run -d -p 80:8787 -e USER=<username> -e PASSWORD=<password> rocker/rstudio
+```
+you don't have to go to port 8787 when you do this (since it's sending port 80 traffic through to port 8787)
 
 
