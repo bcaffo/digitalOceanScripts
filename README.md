@@ -2,6 +2,24 @@
 
 This is a collection of digital ocean scripts for ubuntu (16.04) droplets. Most of them should work for any ubuntu server.
 
+
+## To set up an rstudio server 
+```
+## Optional, add a new user so that you're not always logging in as root.
+adduser NEWUSERNAME
+gpasswd -a NEWUSERNAME sudo
+su - NEWUSERNAME
+## install rstudio server and start it
+wget https://raw.githubusercontent.com/bcaffo/digitalOceanScripts/master/setUpRstudio.sh
+bash setUpRstudio.sh
+```
+Also, put your public key in your authorized keys file in `~/.ssh/authorized_keys`. For example,
+if you scp it to your server, 
+```
+cat MYPUBLICKEY >> ~/.ssh/authorized_keys
+```
+
+
 **DON'T RUN YOUR PLUMBER SERVER AND RSTUDIO SERVER ON THE SAME SERVER!**
 
 ## To set up a server running nginx and plumber
@@ -38,19 +56,4 @@ chmod u+x removeService.sh
 ```
 For example `./removeService hello` will remove the `hello` example
 
-## To set up an rstudio server 
-```
-## Optional, add a new user so that you're not always logging in as root.
-adduser NEWUSERNAME
-gpasswd -a NEWUSERNAME sudo
-su - NEWUSERNAME
-## install rstudio server and start it
-wget https://raw.githubusercontent.com/bcaffo/digitalOceanScripts/master/setUpRstudio.sh
-bash setUpRstudio.sh
-```
-Also, put your public key in your authorized keys file in `~/.ssh/authorized_keys`. For example,
-if you scp it to your server, 
-```
-cat MYPUBLICKEY >> ~/.ssh/authorized_keys
-```
 
