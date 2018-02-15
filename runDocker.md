@@ -43,6 +43,8 @@ install.packages(jpeg)
 install.packages(keras)
 library(keras)
 install_keras()
+## need the github version of reticulate
+devtools::install_github("rstudio/reticulate")
 ```
 
 That works for me.
