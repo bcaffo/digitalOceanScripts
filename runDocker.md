@@ -28,12 +28,18 @@ In the instance, to get keras running need some other stuff
 ```
 sudo apt-get update
 sudo apt-get install python-pip python-dev build-essential 
-sudo pip install --upgrade pip 
 sudo pip install --upgrade virtualenv 
 ```
 
+I need the jpeg lib
+```
+sudo apt-get install libjpeg-dev
+```
+
+
 Then in R 
 ```
+install.packages(jpeg)
 install.packages(keras)
 library(keras)
 install_keras()
