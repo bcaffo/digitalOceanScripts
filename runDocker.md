@@ -60,4 +60,5 @@ docker run -d -p 80:8787 -e USER=<username> -e PASSWORD=<password> rocker/rstudi
 ```
 you don't have to go to port 8787 when you do this (since it's sending port 80 traffic through to port 8787)
 
+Also, here's some notes on persistent user data [https://datawookie.netlify.com/blog/2017/07/docker-persisting-user-data/](https://datawookie.netlify.com/blog/2017/07/docker-persisting-user-data/)
 
