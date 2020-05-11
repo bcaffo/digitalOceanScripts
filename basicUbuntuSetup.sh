@@ -42,33 +42,5 @@ sudo su - -c "R -e \"install.packages('shiny', repos='http://cran.rstudio.com/')
 sudo su - -c "R -e \"install.packages('rmarkdown', repos='http://cran.rstudio.com/')\""
 sudo su - -c "R -e \"install.packages('tidyverse', repos='http://cran.rstudio.com/')\""
 
-# actually install rstudio server
-wget $RSTUDIO
-wget $SHINY
-sudo gdebi --non-interactive rstudio*.deb
-sudo gdebi --non-interactive shiny*.deb
-
-
-# I got this from here: https://support.rstudio.com/hc/en-us/articles/200552316-Configuring-the-Server
-# this allows the port to be 80 so that you don't have to type 8787 
-sudo /bin/sh -c 'echo "www-port=80" >> /etc/rstudio/rserver.conf'
-
-sudo rstudio-server start
-
-# install keras
-sudo su - -c "R -e \"devtools::install_github('rstudio/keras')\""
-
-# Upgrade pip
-sudo -H pip install --upgrade pip
-# Upgrade python AI libraries
-sudo pip install --upgrade keras
-sudo -H pip install --upgrade tensorflow
-sudo -H pip install --upgrade theano
-sudo -H pip install --upgrade Pillow
-#sudo -H pip install --upgrade pillow
-
-
-# Install keras
-sudo su - -c "R -e \"library(keras); install_keras()\""
 
 
