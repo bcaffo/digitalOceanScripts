@@ -38,9 +38,5 @@ sudo apt-get -y install texlive-full
 
 ## Install shiny, devtools, rmarkdown, tidyverse
 sudo su - -c "R -e \"install.packages('devtools', repos='http://cran.rstudio.com/')\""
-sudo su - -c "R -e \"install.packages('shiny', repos='http://cran.rstudio.com/')\""
 sudo su - -c "R -e \"install.packages('rmarkdown', repos='http://cran.rstudio.com/')\""
 sudo su - -c "R -e \"install.packages('tidyverse', repos='http://cran.rstudio.com/')\""
-
-
-
